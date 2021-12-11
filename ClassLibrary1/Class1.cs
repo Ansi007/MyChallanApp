@@ -4,6 +4,12 @@
     {
         public string Username { get; set; }
         public string Password { get; set; }
+        public Login(string user, string pass)
+        {
+            Username = user;
+            Password = pass;
+        }
+
         public bool Authenticate(string user, string pass)
         {
             if(user == Username && pass == Password)
@@ -25,9 +31,14 @@
     }
     public class Warden
     {
-        Login wardenLogin;
-        ProfileDetails wardenProfileDetails;
+        public Login wardenLogin;
 
+        private ProfileDetails wardenProfileDetails;
+
+        public void IssueChallan()
+        {
+
+        }
 
     }
 
@@ -35,6 +46,7 @@
     {
         Login userLogin;
         ProfileDetails userProfileDetails;
+
     }
 
     public class Challan
